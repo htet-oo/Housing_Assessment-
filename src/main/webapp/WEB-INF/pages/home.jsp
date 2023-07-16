@@ -20,9 +20,6 @@
 					<button type="submit" class="btn btn-success ml-3">Search</button>
 				</form>
 			</div>
-			<c:url var="createHouse" value="/house/create" />
-			<a class="inline-block btn btn-primary" href="${createHouse}">Add
-				New</a>
 		</div>
 		
 		<div class="table-responsive py-5">
@@ -34,7 +31,6 @@
 					<th>Single Room</th>
 					<th>Address</th>
 					<th>Amount</th>
-					<th>Action</th>
 				</tr>
 				<c:forEach items="${houses}" var="house">
 					<tr>
@@ -44,18 +40,6 @@
 						<td>${house.numberOfSingleRoom}</td>
 						<td>${house.address}</td>
 						<td>${house.amount}</td>
-						<td>
-							<c:url value="/house/edit" var="houseEdit">
-								<c:param name="editId" value="${house.id}"></c:param>
-							</c:url> 
-							<a class="btn btn-info" href="${houseEdit}">Edit</a> 
-							
-							<c:url value="/house/delete" var="houseDelete">
-								<c:param name="deleteId" value="${house.id}"></c:param>
-							</c:url> 
-							<a class="btn btn-danger" href="${houseDelete}">Delete</a> 
-							
-						</td>
 					</tr>
 					
 					
