@@ -6,22 +6,25 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import springblog.bl.dto.UserDTO;
-import springblog.persistence.dao.user.UserDao;
-import springblog.persistence.entity.User;
+import springblog.bl.dto.OwnerDTO;
+import springblog.persistence.dao.owner.OwnerDao;
+import springblog.persistence.entity.Owner;
 
 @Service
 public class RoleDetailsService implements UserDetailsService {
 	
 	@Autowired
-	private UserDao userDao;
+	private OwnerDao ownerDao;
 	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		User user = userDao.findByEmail(username);
-		UserDTO userDto = new UserDTO(user);
-		return userDto;
+		System.out.println("before find");
+		System.out.println(username);
+		ownerDao.findByEmail(username);
+		System.out.println("after find");
+		OwnerDTO ownerDto = new OwnerDTO(ownerDao.findByEmail(username));
+		return ownerDto;
 	}
 
 }

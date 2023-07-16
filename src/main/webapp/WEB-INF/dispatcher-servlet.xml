@@ -27,7 +27,6 @@
 		<property name="locations">
 			<list>
 				<value>/WEB-INF/jdbc.properties</value>
-				<value>/WEB-INF/mail.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -45,8 +44,8 @@
 		<property name="definitions">
 			<list>
 				<value>/WEB-INF/layouts/layouts.xml</value>
-				<value>/WEB-INF/layouts/post-view.xml</value>
-				<value>/WEB-INF/layouts/user-view.xml</value>
+				<value>/WEB-INF/layouts/owner-view.xml</value>
+				<value>/WEB-INF/layouts/home-view.xml</value>
 			</list>
 		</property>
 	</bean>
@@ -94,43 +93,6 @@
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 	
-	<!-- image upload config -->
-	
-	<bean id="multipartResolver" 
-		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-	</bean>
-	
-	
-	<!-- Mail Configuration -->
-	<bean id="mailSender"
-		class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="${mail.smtp.host}" />
-		<property name="port" value="${mail.smtp.port}" />
-		<property name="username" value="${mail.smtp.username}" />
-		<property name="password" value="${mail.smtp.password}" />
-		<property name="javaMailProperties">
-			<props>
-				<prop key="mail.smtp.auth">true</prop>
-				<prop key="mail.transport.protocol">smtp</prop>
-				<prop key="mail.smtp.starttls.enable">true</prop>
-				<prop key="mail.smtp.starttls.required">true</prop>
-				<prop key="mail.smtp.ssl.protocols">TLSv1.2</prop>
-			</props>
-		</property>
-	</bean>
-	
-	
-	
-	
-	<!-- security -->
-	<bean id="myUserDetailsService"
-		class="springblog.bl.services.auth.RoleDetailsService" />
-
-	<bean id="customAuthenticationSuccessHandler"
-		class="springblog.bl.services.auth.CustomAuthenticationSuccessHandler" />
-		
-	<bean id="passwordEncoder" 
-		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 	
 	
 	

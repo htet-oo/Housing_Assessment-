@@ -10,8 +10,8 @@
 <body>
 	<div class="container py-5">
 		<div class="d-flex justify-content-between">
-			<c:url var="ownerHome" value="/owner/home"></c:url>
-			<h3>Housing List <a href="${ownerHome}"></a></h3>
+			<c:url var="houseHome" value="/house/home"></c:url>
+			<h3>Housing List <a href="${houseHome}"></a></h3>
 			<div>
 				<c:url var="searchHouse" value="/owner/search" />
 				<form action="${searchHouse}" method="GET" class="d-flex">

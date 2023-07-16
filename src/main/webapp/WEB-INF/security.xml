@@ -13,7 +13,13 @@
     http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd">
 
 	<!-- Security -->
-		
+	<bean id="customAuthenticationSuccessHandler"
+		class="springblog.bl.services.auth.CustomAuthenticationSuccessHandler" />
+	<bean id="myUserDetailsService"
+		class="springblog.bl.services.auth.RoleDetailsService" />
+	<bean id="passwordEncoder" 
+		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+			
 	<security:authentication-manager>
 		<security:authentication-provider >
 			<security:user-service>
@@ -29,8 +35,8 @@
 
 
 	<security:http>
-	    <security:intercept-url pattern="/users/**" access="hasAnyAuthority('Admin')" />
-	    <security:intercept-url pattern="/posts/**" access="hasAnyAuthority('User')" />
+		<security:intercept-url pattern="/owner/create/**" access="permitAll" />
+		<security:intercept-url pattern="/owner/**" access="hasAnyAuthority('Owner')" />
 	    <security:intercept-url pattern="/login/**" access="permitAll" />
 	    <security:intercept-url pattern="/**" access="permitAll" />
 	    <security:intercept-url pattern="/resources/**" access="permitAll" />

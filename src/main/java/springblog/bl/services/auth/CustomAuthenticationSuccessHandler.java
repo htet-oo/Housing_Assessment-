@@ -21,10 +21,10 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
     	request.getSession().setAttribute("account", account);
     	System.out.println("this is account " + account);
     	
-        if (authorities.contains(new SimpleGrantedAuthority("Admin"))) {
-            response.sendRedirect("users/list");
+        if (authorities.contains(new SimpleGrantedAuthority("Owner"))) {
+            response.sendRedirect("owner/home");
         } else if (authorities.contains(new SimpleGrantedAuthority("User"))) {
-        	response.sendRedirect("posts/list");
+        	response.sendRedirect("user/list");
         }
     }
 }
