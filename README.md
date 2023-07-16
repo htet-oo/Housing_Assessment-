@@ -6,3 +6,6 @@
 ![2023-07-17 03 32 11](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/7944a83b-4942-4243-93ab-c25b5d31773a)
 ![2023-07-17 03 32 45](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/3413f823-a989-4a90-889d-07c9ce65bd1a)
 ![2023-07-17 03 32 55](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/84e3701b-ba38-4d37-af64-8226a37d6201)
+![2023-07-17 03 33 31](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/97cf7bd0-c460-463f-b3e2-b2dcedf42936)
+![2023-07-17 03 34 09](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/206846c5-0df0-4635-bbc2-e4c68ea68608)
+![2023-07-17 03 34 18](https://github.com/htet-oo/Housing_Assessment-/assets/58355434/1ac6bcd7-8673-46c5-9938-2890b5773a3b)
